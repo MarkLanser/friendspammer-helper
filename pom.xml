@@ -6,8 +6,6 @@
 	<artifactId>friendspammer-helper</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
-
- 
 	
 	<build>
 		<plugins>
@@ -25,7 +23,26 @@
 				<version>2.22.1</version>
 			</plugin>
 		</plugins>
+
+		<extensions>
+			<extension>
+				<groupId>io.packagecloud.maven.wagon</groupId>
+				<artifactId>maven-packagecloud-wagon</artifactId>
+				<version>0.0.6</version>
+			</extension>
+		</extensions>
 	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>packagecloud-marklanser</id>
+			<url>packagecloud+https://packagecloud.io/marklanser/friendspammer-helper</url>
+		</repository>
+		<snapshotRepository>
+			<id>packagecloud-marklanser</id>
+			<url>packagecloud+https://packagecloud.io/marklanser/friendspammer-helper</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<dependencies>
 
